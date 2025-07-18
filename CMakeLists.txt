@@ -18,14 +18,12 @@ target_sources(ConsoleAppExample
 
 target_compile_definitions(ConsoleAppExample
         PRIVATE
-        # JUCE_WEB_BROWSER and JUCE_USE_CURL would be on by default, but you might not need them.
         JUCE_WEB_BROWSER=0
         JUCE_USE_CURL=0
 )
 
 target_link_libraries(ConsoleAppExample
         PRIVATE
-        # ConsoleAppData            # If you'd created a binary data target, you'd link to it here
         juce::juce_core
         juce::juce_audio_devices
         PUBLIC

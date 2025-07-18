@@ -1,25 +1,13 @@
 cmake_minimum_required(VERSION 3.31)
 
-include(FetchContent)
-
 project(juce_audio_device_manager_data_race VERSION 1.1.1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-########
-# JUCE #
-########
-
-FetchContent_Declare(
-        JUCE
-        GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-        GIT_TAG develop
-)
-
 set(JUCE_ENABLE_MODULE_SOURCE_GROUPS ON)
 set_property(GLOBAL PROPERTY USE_FOLDERS YES)
 
-FetchContent_MakeAvailable(JUCE)
+add_subdirectory(JUCE)
 
 juce_add_console_app(ConsoleAppExample
         PRODUCT_NAME "Console App Example")

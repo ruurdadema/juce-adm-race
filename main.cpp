@@ -2,22 +2,11 @@
 
 #include "juce_audio_devices/juce_audio_devices.h"
 
-namespace
-{
-    juce::String findDeviceName(const juce::StringArray& array, const juce::String& deviceName)
-    {
-        for (auto& i : array)
-            if (i.containsIgnoreCase(deviceName))
-                return i;
-        return {};
-    }
-}
-
 int main()
 {
     juce::ScopedJuceInitialiser_GUI initialiser;
 
-    for (int i = 0; i < 512; ++i)
+    for (int i = 0; i < 42; ++i)
     {
         std::cout << i << std::endl;
 
